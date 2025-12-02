@@ -103,46 +103,44 @@ if not df_filtered.empty:
 st.markdown("---")
 st.subheader("Detailvergleiche (Bar Charts)")
 
-# Container für die Bar Charts, um eine 2-spaltige Ansicht zu erzeugen
-col1, col2 = st.columns(1)
-col3, col4 = st.columns(1)
-col5, col6 = st.columns(1)
 
+# Container für die Bar Charts, um eine 2-spaltige Ansicht zu erzeugen
+# Diese Spaltendefinitionen werden entfernt, um eine Einspalten-Ansicht zu erzwingen
 
 # Funktion zum Generieren eines Bar Charts (wird mehrfach verwendet)
-def generate_bar_chart(df, y_col, title, y_label, container):
-    """Generiert ein Bar Chart in einem bestimmten Container."""
-    with container:
-        fig = px.bar(
-            df,
-            x='Name',
-            y=y_col,
-            title=title,
-            color=y_col,
-            color_continuous_scale=px.colors.sequential.Turbo
-        )
-        fig.update_layout(xaxis_title="Spieler", yaxis_title=y_label)
-        st.plotly_chart(fig, use_container_width=True)
+# Das Argument 'container' wird entfernt, da das Chart direkt in Streamlit geschrieben wird (volle Breite)
+def generate_bar_chart(df, y_col, title, y_label):
+    """Generiert ein Bar Chart in voller Breite."""
+    fig = px.bar(
+        df,
+        x='Name',
+        y=y_col,
+        title=title,
+        color=y_col,
+        color_continuous_scale=px.colors.sequential.Turbo
+    )
+    fig.update_layout(xaxis_title="Spieler", yaxis_title=y_label)
+    st.plotly_chart(fig, use_container_width=True)
 
 
 # 1. Leetify Rating Vergleich
-with col1:
-    st.markdown(
-        """
-        <div style='font-size: 14px; padding: 10px 10px; background-color: #e8f0fe; border-radius: 5px; border-left: 3px solid #007bff;'>
-            <strong>Erläuterung:</strong> Der Leetify Score ist ein komplexer, kontextbezogener Spieler-Rating-Wert, der speziell 
-            entwickelt wurde, um den tatsächlichen Einfluss (Impact) eines Spielers auf den Ausgang 
-            einer Runde oder eines Matches in CS2 genauer zu messen.
-        </div>
-        """, unsafe_allow_html=True
-    )
+# Die Erklärung steht nun in einer separaten Zeile (volle Breite)
+st.markdown(
+    """
+    <div style='font-size: 14px; padding: 10px 10px; background-color: #e8f0fe; border-radius: 5px; border-left: 3px solid #007bff;'>
+        <strong>Erläuterung:</strong> Der Leetify Score ist ein komplexer, kontextbezogener Spieler-Rating-Wert, der speziell 
+        entwickelt wurde, um den tatsächlichen Einfluss (Impact) eines Spielers auf den Ausgang 
+        einer Runde oder eines Matches in CS:GO/CS2 genauer zu messen.
+    </div>
+    """, unsafe_allow_html=True
+)
 
+# Das Diagramm steht nun in einer eigenen Zeile (volle Breite)
 generate_bar_chart(
     df_filtered,
     'Leetify_Rating',
     'Vergleich des Leetify Ratings',
     'Leetify Rating',
-    col2
 )
 
 # 2. Aim Rating Vergleich
@@ -151,7 +149,6 @@ generate_bar_chart(
     'Aim_Rating',
     'Vergleich des Aim Ratings',
     'Aim Rating (Leetify Score)',
-    col3
 )
 
 # 3. Utility Rating Vergleich
@@ -160,7 +157,6 @@ generate_bar_chart(
     'Utility_Rating',
     'Vergleich des Utility Ratings',
     'Utility Rating (Leetify Score)',
-    col4
 )
 
 # 4. Opening Kill Success Vergleich
@@ -169,7 +165,6 @@ generate_bar_chart(
     'Opening_Kill_Success',
     'Vergleich des Opening Kill Success (Wert = Value x 1000)',
     'Opening Kill Success (Leetify Score)',
-    col5
 )
 
 # 5. Positioning Rating Vergleich
@@ -178,7 +173,6 @@ generate_bar_chart(
     'Positioning_Rating',
     'Vergleich des Positioning Ratings',
     'Positioning Rating (Leetify Score)',
-    col6
 )
 
 # Spezieller Fall: Clutch Percentage (wird als letztes hinzugefügt)
@@ -186,14 +180,11 @@ st.markdown("---")
 st.subheader("Clutch Percentage")
 st.markdown("Der Clutch Percentage ist ein entscheidender Wert für Spieler, die Runden in Unterzahl gewinnen können.")
 
-col_clutch, _ = st.columns([0.5, 0.5])  # Nur eine Spalte für den letzten Plot
-
 generate_bar_chart(
     df_filtered,
     'Clutch_Percentage',
     'Vergleich des Clutch Percentage',
     'Clutch Percentage',
-    col_clutch
 )
 
 # --- ENDE DER STREAMLIT APP ---
