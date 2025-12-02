@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6f453a-8268-4b5d-97ec-f2f832f7daaa" name="Changes" comment="umbau splitlit" />
+    <list default="true" id="6e6f453a-8268-4b5d-97ec-f2f832f7daaa" name="Changes" comment="text angepasst" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -196,7 +196,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764684287885</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="umbau splitlit einzeilig">
+      <option name="closed" value="true" />
+      <created>1764684383217</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1764684383217</updated>
+    </task>
+    <task id="LOCAL-00016" summary="text angepasst">
+      <option name="closed" value="true" />
+      <created>1764684629336</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1764684629336</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,6 +230,8 @@
     <MESSAGE value="laeuft" />
     <MESSAGE value="lauf halt" />
     <MESSAGE value="umbau splitlit" />
-    <option name="LAST_COMMIT_MESSAGE" value="umbau splitlit" />
+    <MESSAGE value="umbau splitlit einzeilig" />
+    <MESSAGE value="text angepasst" />
+    <option name="LAST_COMMIT_MESSAGE" value="text angepasst" />
   </component>
 </project>

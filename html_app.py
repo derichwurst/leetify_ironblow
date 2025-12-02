@@ -123,24 +123,12 @@ def generate_bar_chart(df, y_col, title, y_label):
     st.plotly_chart(fig, use_container_width=True)
 
 
-# 1. Leetify Rating Vergleich
-# Die Erklärung steht nun in einer separaten Zeile (volle Breite)
-st.markdown(
-    """
-    <div style='font-size: 14px; padding: 10px 10px; background-color: #e8f0fe; border-radius: 5px; border-left: 3px solid #007bff;'>
-        <strong>Erläuterung:</strong> Der Leetify Score ist ein komplexer, kontextbezogener Spieler-Rating-Wert, der speziell 
-        entwickelt wurde, um den tatsächlichen Einfluss (Impact) eines Spielers auf den Ausgang 
-        einer Runde oder eines Matches in CS:GO/CS2 genauer zu messen.
-    </div>
-    """, unsafe_allow_html=True
-)
-
 # Spezieller Fall: Clutch Percentage (wird als letztes hinzugefügt)
 st.markdown("---")
-st.subheader("Leetify Rating")
-st.markdown("<strong>Erläuterung:</strong> Der Leetify Score ist ein komplexer, kontextbezogener Spieler-Rating-Wert, der speziell",
-        "entwickelt wurde, um den tatsächlichen Einfluss (Impact) eines Spielers auf den Ausgang",
-        "einer Runde oder eines Matches in CS:GO/CS2 genauer zu messen. Formel: (ct-leetify rateing + ct-leetify rateing) / 2 ")
+st.subheader("Leetify_Rating")
+st.markdown("Erlaeuterung: Der Leetify Score ist ein komplexer, kontextbezogener Spieler-Rating-Wert, der speziell"
+            " mentwickelt wurde, um den tatsächlichen Einfluss (Impact) eines Spielers auf den Ausgang einer Runde "
+            "oder eines Matches in CS:GO/CS2 genauer zu messen. Formel: (ct-leetify rateing + ct-leetify rateing) / 2 ")
 
 # Das Diagramm steht nun in einer eigenen Zeile (volle Breite)
 generate_bar_chart(
