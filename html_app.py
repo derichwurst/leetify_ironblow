@@ -104,9 +104,9 @@ st.markdown("---")
 st.subheader("Detailvergleiche (Bar Charts)")
 
 # Container für die Bar Charts, um eine 2-spaltige Ansicht zu erzeugen
-col1, col2 = st.columns(2)
-col3, col4 = st.columns(2)
-col5, col6 = st.columns(2)
+col1, col2 = st.columns(1)
+col3, col4 = st.columns(1)
+col5, col6 = st.columns(1)
 
 
 # Funktion zum Generieren eines Bar Charts (wird mehrfach verwendet)
@@ -132,7 +132,7 @@ with col1:
         <div style='font-size: 14px; padding: 10px 10px; background-color: #e8f0fe; border-radius: 5px; border-left: 3px solid #007bff;'>
             <strong>Erläuterung:</strong> Der Leetify Score ist ein komplexer, kontextbezogener Spieler-Rating-Wert, der speziell 
             entwickelt wurde, um den tatsächlichen Einfluss (Impact) eines Spielers auf den Ausgang 
-            einer Runde oder eines Matches in CS:GO/CS2 genauer zu messen.
+            einer Runde oder eines Matches in CS2 genauer zu messen.
         </div>
         """, unsafe_allow_html=True
     )
