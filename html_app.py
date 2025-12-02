@@ -103,7 +103,7 @@ st.markdown("---")
 st.subheader("Leetify_Rating")
 st.markdown("Erlaeuterung: Der Leetify Score ist ein komplexer, kontextbezogener Spieler-Rating-Wert, der speziell"
             " mentwickelt wurde, um den tatsächlichen Einfluss (Impact) eines Spielers auf den Ausgang einer Runde "
-            "oder eines Matches in CS:GO/CS2 genauer zu messen. Formel: (ct-leetify rateing + ct-leetify rateing) / 2 ")
+            "oder eines Matches in CS:GO/CS2 genauer zu messen. Formel: (ct-leetify rating + ct-leetify rating) / 2 ")
 
 
 generate_bar_chart(
