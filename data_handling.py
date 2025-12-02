@@ -1,7 +1,7 @@
 import os.path
 
 import pandas as pd
-import leetify
+# import leetify
 import pickle
 
 # Dies sind die SteamIDs, deren Daten du darstellen möchtest
@@ -15,27 +15,27 @@ STEAM_IDS = [
 ]
 
 
-def store_new_player_data():
-    for steam_in in STEAM_IDS:
-        lettify_obj = leetify.LeetifyAPIClient()
-        player_data = lettify_obj.get_player_profile(steam_in)
-
-        # create path
-        full_path = os.path.join("player_data", str(steam_in)+"-"+player_data["name"])
-
-        # check if folder is ready
-        os.makedirs("player_data", exist_ok=True)
-
-        # dump that shit
-        try:
-            with open(full_path, "wb") as f:
-                pickle.dump(player_data, f)
-
-            print(str(steam_in)+"-"+player_data["name"] + " stored.")
-            #return True
-        except Exception as e:
-            print(f"❌ Fehler beim Speichern: {e}")
-            #return False
+# def store_new_player_data():
+#     for steam_in in STEAM_IDS:
+#         lettify_obj = leetify.LeetifyAPIClient()
+#         player_data = lettify_obj.get_player_profile(steam_in)
+#
+#         # create path
+#         full_path = os.path.join("player_data", str(steam_in)+"-"+player_data["name"])
+#
+#         # check if folder is ready
+#         os.makedirs("player_data", exist_ok=True)
+#
+#         # dump that shit
+#         try:
+#             with open(full_path, "wb") as f:
+#                 pickle.dump(player_data, f)
+#
+#             print(str(steam_in)+"-"+player_data["name"] + " stored.")
+#             #return True
+#         except Exception as e:
+#             print(f"❌ Fehler beim Speichern: {e}")
+#             #return False
 
 
 def get_all_player_data():
