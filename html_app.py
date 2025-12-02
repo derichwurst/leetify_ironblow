@@ -309,10 +309,10 @@ def update_bar_chart(selected_players):
 
 
 # --- 5. APP STARTEN ---
-# if __name__ == '__main__':
+if __name__ == '__main__':
 #     # print("Starte Dash App...")
 #     # print("Öffne http://127.0.0.1:8050/ in deinem Browser")
-#     app.run(debug=True)
+    app.run(debug=True)
 
 server = app.server
 
