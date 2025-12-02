@@ -135,6 +135,13 @@ st.markdown(
     """, unsafe_allow_html=True
 )
 
+# Spezieller Fall: Clutch Percentage (wird als letztes hinzugefügt)
+st.markdown("---")
+st.subheader("Leetify Rating")
+st.markdown("<strong>Erläuterung:</strong> Der Leetify Score ist ein komplexer, kontextbezogener Spieler-Rating-Wert, der speziell",
+        "entwickelt wurde, um den tatsächlichen Einfluss (Impact) eines Spielers auf den Ausgang",
+        "einer Runde oder eines Matches in CS:GO/CS2 genauer zu messen. Formel: (ct-leetify rateing + ct-leetify rateing) / 2 ")
+
 # Das Diagramm steht nun in einer eigenen Zeile (volle Breite)
 generate_bar_chart(
     df_filtered,
@@ -174,11 +181,6 @@ generate_bar_chart(
     'Vergleich des Positioning Ratings',
     'Positioning Rating (Leetify Score)',
 )
-
-# Spezieller Fall: Clutch Percentage (wird als letztes hinzugefügt)
-st.markdown("---")
-st.subheader("Clutch Percentage")
-st.markdown("Der Clutch Percentage ist ein entscheidender Wert für Spieler, die Runden in Unterzahl gewinnen können.")
 
 generate_bar_chart(
     df_filtered,
