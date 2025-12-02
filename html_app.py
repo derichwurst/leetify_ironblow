@@ -307,6 +307,7 @@ def update_bar_chart(selected_players):
     fig.update_layout(xaxis_title="Spieler", yaxis_title="Positioning_Rating (Leetify Score)")
     return fig
 
+server = app.server
 
 # --- 5. APP STARTEN ---
 if __name__ == '__main__':
@@ -314,5 +315,5 @@ if __name__ == '__main__':
 #     # print("Öffne http://127.0.0.1:8050/ in deinem Browser")
     app.run()
 
-server = app.server
+
 
