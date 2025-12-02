@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-# Stellen Sie sicher, dass data_handling in Ihrem Repository existiert und funktioniert.
 from data_handling import get_data_for_dashboard
 
 # Konfiguration der Seite
@@ -11,10 +10,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-
-# --- 1. DATEN ABRUFEN (mit Caching) ---
-# Mit @st.cache_data wird die Funktion nur einmal ausgeführt,
-# solange sich die Eingaben (oder der Funktionskörper) nicht ändern.
 @st.cache_data
 def load_data():
     """Lädt die Leetify-Daten einmalig und cached sie."""
@@ -24,10 +19,8 @@ def load_data():
 
 df_stats = load_data()
 
-# --- VORBEREITUNG FÜR PLOTS ---
 player_options = df_stats['Name'].unique().tolist()
 
-# Die Metriken, die im Radar Chart verglichen werden sollen
 RADAR_METRICS = [
     'Aim_Rating',
     'Utility_Rating',
@@ -35,43 +28,34 @@ RADAR_METRICS = [
     'Clutch_Percentage',
     'Positioning_Rating',
 ]
-# Spalten, die in Prozent (0-1) vorliegen und auf 0-100 skaliert werden müssen
+
 PERCENTAGE_COLS = ['Clutch_Percentage']
 
-# --- 2. LAYOUT UND KONTROLLEN DEFINIEREN ---
 
 st.title("🎮 IronBlow Leetify Statistiken")
-st.markdown("Ein interaktives Dashboard zur Analyse der Spielerleistungen.")
 st.markdown("---")
 
-# Kontrollbereich (Multi-Select Dropdown)
-# Streamlit-Widgets geben den aktuellen Wert direkt zurück
+
 selected_players = st.multiselect(
     "Wähle die Spieler für den Vergleich:",
     options=player_options,
-    default=player_options,  # Standardwert: Alle Spieler sind ausgewählt
+    default=player_options,
 )
 
-# Überprüfen, ob Spieler ausgewählt sind
 if not selected_players:
     st.warning("Bitte wähle mindestens einen Spieler aus, um die Statistiken anzuzeigen.")
     st.stop()
 
-# Filtern des Haupt-DataFrames auf die ausgewählten Spieler
 df_filtered = df_stats[df_stats['Name'].isin(selected_players)].copy()
 
-# --- 3. PLOTS GENERIEREN ---
 
-# 1. Multi-Player Radar Chart (Haupt-Vergleich)
 st.header("📊 Vergleich der Spielerleistungen (Radar Chart)")
 if not df_filtered.empty:
 
-    # Skalierung der Prozentwerte (0-1) auf 0-100
     df_scaled = df_filtered.copy()
     for col in PERCENTAGE_COLS:
         df_scaled[col] = df_scaled[col] * 100
 
-    # Umformen des DataFrames ins Long Format (für Plotly Express)
     df_long = df_scaled.melt(
         id_vars=['Name'],
         value_vars=RADAR_METRICS,
@@ -79,7 +63,6 @@ if not df_filtered.empty:
         value_name='Score'
     )
 
-    # Erzeuge das Polar (Radar)-Chart
     fig_radar = px.line_polar(
         df_long,
         r='Score',
@@ -89,7 +72,6 @@ if not df_filtered.empty:
         title="Vergleich der Spielerleistungen auf Basis der Leetify-Statistiken"
     )
 
-    # Optische Anpassungen
     fig_radar.update_traces(fill='toself', opacity=0.5)
     fig_radar.update_layout(
         polar=dict(
@@ -104,13 +86,7 @@ st.markdown("---")
 st.subheader("Detailvergleiche (Bar Charts)")
 
 
-# Container für die Bar Charts, um eine 2-spaltige Ansicht zu erzeugen
-# Diese Spaltendefinitionen werden entfernt, um eine Einspalten-Ansicht zu erzwingen
-
-# Funktion zum Generieren eines Bar Charts (wird mehrfach verwendet)
-# Das Argument 'container' wird entfernt, da das Chart direkt in Streamlit geschrieben wird (volle Breite)
 def generate_bar_chart(df, y_col, title, y_label):
-    """Generiert ein Bar Chart in voller Breite."""
     fig = px.bar(
         df,
         x='Name',
@@ -123,14 +99,13 @@ def generate_bar_chart(df, y_col, title, y_label):
     st.plotly_chart(fig, use_container_width=True)
 
 
-# Spezieller Fall: Clutch Percentage (wird als letztes hinzugefügt)
 st.markdown("---")
 st.subheader("Leetify_Rating")
 st.markdown("Erlaeuterung: Der Leetify Score ist ein komplexer, kontextbezogener Spieler-Rating-Wert, der speziell"
             " mentwickelt wurde, um den tatsächlichen Einfluss (Impact) eines Spielers auf den Ausgang einer Runde "
             "oder eines Matches in CS:GO/CS2 genauer zu messen. Formel: (ct-leetify rateing + ct-leetify rateing) / 2 ")
 
-# Das Diagramm steht nun in einer eigenen Zeile (volle Breite)
+
 generate_bar_chart(
     df_filtered,
     'Leetify_Rating',
@@ -138,7 +113,7 @@ generate_bar_chart(
     'Leetify Rating',
 )
 
-# 2. Aim Rating Vergleich
+
 generate_bar_chart(
     df_filtered,
     'Aim_Rating',
@@ -146,7 +121,7 @@ generate_bar_chart(
     'Aim Rating (Leetify Score)',
 )
 
-# 3. Utility Rating Vergleich
+
 generate_bar_chart(
     df_filtered,
     'Utility_Rating',
@@ -154,7 +129,7 @@ generate_bar_chart(
     'Utility Rating (Leetify Score)',
 )
 
-# 4. Opening Kill Success Vergleich
+
 generate_bar_chart(
     df_filtered,
     'Opening_Kill_Success',
@@ -162,7 +137,7 @@ generate_bar_chart(
     'Opening Kill Success (Leetify Score)',
 )
 
-# 5. Positioning Rating Vergleich
+
 generate_bar_chart(
     df_filtered,
     'Positioning_Rating',
@@ -176,5 +151,3 @@ generate_bar_chart(
     'Vergleich des Clutch Percentage',
     'Clutch Percentage',
 )
-
-# --- ENDE DER STREAMLIT APP ---
