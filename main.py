@@ -1,6 +1,7 @@
 import streamlit as st
 
 rating_page = st.Page("rating.py", title="IB Leetify Rating", icon="📉")
+aim_page = st.Page("aim_stats.py", title="IB Leetify Aim Rating", icon="✠")
 duell_page = st.Page("duell_stats.py", title="IB Leetify Duell Rating", icon="🤼")
 trade_page = st.Page("trade_stats.py", title="IB Leetify Trade Rating", icon="🔄")
 flash_page = st.Page("flash_stats.py", title="IB Leetify Flash Stats", icon="👨‍🦯")

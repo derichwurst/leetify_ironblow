@@ -4,20 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6f453a-8268-4b5d-97ec-f2f832f7daaa" name="Changes" comment="clean up">
-      <change afterPath="$PROJECT_DIR$/duell_stats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/he_stats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rating.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/trade_stats.py" afterDir="false" />
+    <list default="true" id="6e6f453a-8268-4b5d-97ec-f2f832f7daaa" name="Changes" comment="duell text">
+      <change afterPath="$PROJECT_DIR$/aim_stats.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_handling.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_handling.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flash_stats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/76561197961677583-End-of-Everything #Corridor 7" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561197961677583-End-of-Everything #Corridor 7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/76561197971163179-Frontallappen @Schade" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561197971163179-Frontallappen @Schade" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/76561197981396218-ColdDemon #ImHerzenNebenJürgen" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561197981396218-ColdDemon #ImHerzenNebenJürgen" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/76561197983756284-Metty" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561197983756284-Metty" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/76561198262480978-BND" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561198262480978-BND" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/76561198825927278-2DRUNK" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561198825927278-2DRUNK" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,22 +34,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Doctests in leetify.executor": "Run",
-    "Python.data_handling.executor": "Run",
-    "Python.flash_stats.executor": "Run",
-    "Python.html_app.executor": "Run",
-    "Python.leetify.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "G:/01_neueshobby/01_Python/14_leetify/IronBlowLeetify",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Doctests in leetify.executor&quot;: &quot;Run&quot;,
+    &quot;Python.data_handling.executor&quot;: &quot;Run&quot;,
+    &quot;Python.flash_stats.executor&quot;: &quot;Run&quot;,
+    &quot;Python.html_app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.leetify.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/01_neueshobby/01_Python/14_leetify/IronBlowLeetify&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\01_neueshobby\01_Python\14_leetify\IronBlowLeetify" />
@@ -264,7 +255,23 @@
       <option name="project" value="LOCAL" />
       <updated>1764694681404</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="add a lot of pages">
+      <option name="closed" value="true" />
+      <created>1765276534444</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1765276534444</updated>
+    </task>
+    <task id="LOCAL-00022" summary="duell text">
+      <option name="closed" value="true" />
+      <created>1765277107942</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1765277107942</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -285,6 +292,8 @@
     <MESSAGE value="umbau splitlit einzeilig" />
     <MESSAGE value="text angepasst" />
     <MESSAGE value="clean up" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean up" />
+    <MESSAGE value="add a lot of pages" />
+    <MESSAGE value="duell text" />
+    <option name="LAST_COMMIT_MESSAGE" value="duell text" />
   </component>
 </project>

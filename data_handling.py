@@ -54,10 +54,10 @@ def get_all_aim_stats():
         stats = {
             "Name": player["name"],
             "SteamID": player["steam64_id"],
-            "Accuracy Enemy Spotted": player["stats"]["accuracy_enemy_spotted"],
-            "counter strafing good shots ratio": player["stats"]["counter_strafing_good_shots_ratio"],
-            "reaction time ms": player["stats"]["reaction_time_ms"],
-            "spray accuracy": player["stats"]["spray_accuracy"],
+            "accuracy_enemy_spotted": player["stats"]["accuracy_enemy_spotted"],
+            "counter_strafing_good_shots_ratio": player["stats"]["counter_strafing_good_shots_ratio"],
+            "reaction_time_ms": player["stats"]["reaction_time_ms"],
+            "spray_accuracy": player["stats"]["spray_accuracy"],
             "preaim": player["stats"]["preaim"]
         }
         weapon_stats.append(stats)
