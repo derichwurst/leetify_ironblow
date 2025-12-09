@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6f453a-8268-4b5d-97ec-f2f832f7daaa" name="Changes" comment="text angepasst" />
+    <list default="true" id="6e6f453a-8268-4b5d-97ec-f2f832f7daaa" name="Changes" comment="clean up">
+      <change afterPath="$PROJECT_DIR$/duell_stats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/he_stats.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rating.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/trade_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_handling.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_handling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/flash_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561197961677583-End-of-Everything #Corridor 7" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561197961677583-End-of-Everything #Corridor 7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561197971163179-Frontallappen @Schade" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561197971163179-Frontallappen @Schade" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561197981396218-ColdDemon #ImHerzenNebenJürgen" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561197981396218-ColdDemon #ImHerzenNebenJürgen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561197983756284-Metty" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561197983756284-Metty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561198262480978-BND" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561198262480978-BND" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561198825927278-2DRUNK" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561198825927278-2DRUNK" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,9 +34,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="36FSRU2ssoIJYt79MsEJB2TMDJ6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -33,6 +47,7 @@
   "keyToString": {
     "Python tests.Doctests in leetify.executor": "Run",
     "Python.data_handling.executor": "Run",
+    "Python.flash_stats.executor": "Run",
     "Python.html_app.executor": "Run",
     "Python.leetify.executor": "Run",
     "Python.main.executor": "Run",
@@ -40,10 +55,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "G:/01_neueshobby/01_Python/13_leetify",
+    "last_opened_file_path": "G:/01_neueshobby/01_Python/14_leetify/IronBlowLeetify",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\01_neueshobby\01_Python\14_leetify\IronBlowLeetify" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="IronBlowLeetify" />
@@ -212,7 +232,39 @@
       <option name="project" value="LOCAL" />
       <updated>1764684629336</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="text angepasst">
+      <option name="closed" value="true" />
+      <created>1764684832778</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1764684832778</updated>
+    </task>
+    <task id="LOCAL-00018" summary="clean up">
+      <option name="closed" value="true" />
+      <created>1764685276136</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1764685276136</updated>
+    </task>
+    <task id="LOCAL-00019" summary="clean up">
+      <option name="closed" value="true" />
+      <created>1764685321230</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1764685321230</updated>
+    </task>
+    <task id="LOCAL-00020" summary="clean up">
+      <option name="closed" value="true" />
+      <created>1764694681404</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1764694681404</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -232,6 +284,7 @@
     <MESSAGE value="umbau splitlit" />
     <MESSAGE value="umbau splitlit einzeilig" />
     <MESSAGE value="text angepasst" />
-    <option name="LAST_COMMIT_MESSAGE" value="text angepasst" />
+    <MESSAGE value="clean up" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean up" />
   </component>
 </project>

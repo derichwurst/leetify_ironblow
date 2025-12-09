@@ -1,20 +1,13 @@
 import streamlit as st
-import pandas as pd
 import plotly.express as px
-from data_handling import get_data_for_dashboard
+from data_handling import get_all_rating
 
-# Konfiguration der Seite
-st.set_page_config(
-    page_title="IronBlow Leetify Statistiken",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
 
 @st.cache_data
 def load_data():
     """Lädt die Leetify-Daten einmalig und cached sie."""
     # Verwenden Sie hier Ihre Datenladefunktion
-    return get_data_for_dashboard()
+    return get_all_rating()
 
 
 df_stats = load_data()
@@ -32,7 +25,7 @@ RADAR_METRICS = [
 PERCENTAGE_COLS = ['Clutch_Percentage']
 
 
-st.title("🎮 IronBlow Leetify Statistiken")
+st.title("📉 IronBlow Leetify Rating Statistiken")
 st.markdown("---")
 
 
@@ -49,7 +42,7 @@ if not selected_players:
 df_filtered = df_stats[df_stats['Name'].isin(selected_players)].copy()
 
 
-st.header("📊 Vergleich der Spielerleistungen (Radar Chart)")
+st.header("Vergleich der Spieler Rating Leetify (Radar Chart)")
 if not df_filtered.empty:
 
     df_scaled = df_filtered.copy()
@@ -99,7 +92,6 @@ def generate_bar_chart(df, y_col, title, y_label):
     st.plotly_chart(fig, use_container_width=True)
 
 
-st.markdown("---")
 st.subheader("Leetify_Rating")
 st.markdown("Erlaeuterung: Der Leetify Score ist ein komplexer, kontextbezogener Spieler-Rating-Wert, der speziell"
             " mentwickelt wurde, um den tatsächlichen Einfluss (Impact) eines Spielers auf den Ausgang einer Runde "
@@ -114,40 +106,9 @@ generate_bar_chart(
 )
 
 
-generate_bar_chart(
-    df_filtered,
-    'Aim_Rating',
-    'Vergleich des Aim Ratings',
-    'Aim Rating (Leetify Score)',
-)
-
-
-generate_bar_chart(
-    df_filtered,
-    'Utility_Rating',
-    'Vergleich des Utility Ratings',
-    'Utility Rating (Leetify Score)',
-)
-
-
-generate_bar_chart(
-    df_filtered,
-    'Opening_Kill_Success',
-    'Vergleich des Opening Kill Success (Wert = Value x 1000)',
-    'Opening Kill Success (Leetify Score)',
-)
-
-
-generate_bar_chart(
-    df_filtered,
-    'Positioning_Rating',
-    'Vergleich des Positioning Ratings',
-    'Positioning Rating (Leetify Score)',
-)
-
-generate_bar_chart(
-    df_filtered,
-    'Clutch_Percentage',
-    'Vergleich des Clutch Percentage',
-    'Clutch Percentage',
-)
+# bar charts automatisch machen
+for metric in RADAR_METRICS:
+    generate_bar_chart(
+        df_filtered,
+        metric, metric, metric
+    )

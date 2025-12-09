@@ -1,41 +1,6 @@
 import os.path
-
 import pandas as pd
-# import leetify
 import pickle
-
-# Dies sind die SteamIDs, deren Daten du darstellen möchtest
-STEAM_IDS = [
-    76561197983756284,  # Narf
-    76561197961677583,  # jürgen
-    76561197971163179,  # markus
-    76561197981396218,  # max
-    76561198825927278,  # julian
-    76561198262480978   # Basti
-]
-
-
-# def store_new_player_data():
-#     for steam_in in STEAM_IDS:
-#         lettify_obj = leetify.LeetifyAPIClient()
-#         player_data = lettify_obj.get_player_profile(steam_in)
-#
-#         # create path
-#         full_path = os.path.join("player_data", str(steam_in)+"-"+player_data["name"])
-#
-#         # check if folder is ready
-#         os.makedirs("player_data", exist_ok=True)
-#
-#         # dump that shit
-#         try:
-#             with open(full_path, "wb") as f:
-#                 pickle.dump(player_data, f)
-#
-#             print(str(steam_in)+"-"+player_data["name"] + " stored.")
-#             #return True
-#         except Exception as e:
-#             print(f"❌ Fehler beim Speichern: {e}")
-#             #return False
 
 
 def get_all_player_data():
@@ -60,8 +25,7 @@ def get_all_player_data():
     return all_play_data
 
 
-def get_data_for_dashboard():
-    """Ruft die Statistiken für alle vordefinierten SteamIDs ab und gibt sie als DataFrame zurück."""
+def get_all_rating():
     all_stats = []
 
     for player in get_all_player_data():
@@ -84,3 +48,87 @@ def get_data_for_dashboard():
     return df
 
 
+def get_all_aim_stats():
+    weapon_stats = []
+    for player in get_all_player_data():
+        stats = {
+            "Name": player["name"],
+            "SteamID": player["steam64_id"],
+            "Accuracy Enemy Spotted": player["stats"]["accuracy_enemy_spotted"],
+            "counter strafing good shots ratio": player["stats"]["counter_strafing_good_shots_ratio"],
+            "reaction time ms": player["stats"]["reaction_time_ms"],
+            "spray accuracy": player["stats"]["spray_accuracy"],
+            "preaim": player["stats"]["preaim"]
+        }
+        weapon_stats.append(stats)
+    df = pd.DataFrame(weapon_stats)
+    return df
+
+
+def get_all_duell_stats():
+    weapon_stats = []
+    for player in get_all_player_data():
+        stats = {
+            "Name": player["name"],
+            "SteamID": player["steam64_id"],
+            "ct_opening_aggression_success_rate": player["stats"]["ct_opening_aggression_success_rate"],
+            "ct_opening_duel_success_percentage": player["stats"]["ct_opening_duel_success_percentage"],
+            "t_opening_aggression_success_rate": player["stats"]["t_opening_aggression_success_rate"],
+            "t_opening_duel_success_percentage": player["stats"]["t_opening_duel_success_percentage"],
+        }
+        weapon_stats.append(stats)
+    df = pd.DataFrame(weapon_stats)
+    return df
+
+
+def get_all_trade_stats():
+    weapon_stats = []
+    for player in get_all_player_data():
+        stats = {
+            "Name": player["name"],
+            "SteamID": player["steam64_id"],
+            "traded_deaths_success_percentage": player["stats"]["traded_deaths_success_percentage"],
+            "trade_kill_opportunities_per_round": player["stats"]["trade_kill_opportunities_per_round"],
+            "trade_kills_success_percentage": player["stats"]["trade_kills_success_percentage"],
+        }
+        weapon_stats.append(stats)
+    df = pd.DataFrame(weapon_stats)
+    return df
+
+
+def get_all_flash_stats():
+    weapon_stats = []
+    for player in get_all_player_data():
+        stats = {
+            "Name": player["name"],
+            "SteamID": player["steam64_id"],
+            "flashbang_hit_foe_avg_duration": player["stats"]["flashbang_hit_foe_avg_duration"],
+            "flashbang_hit_foe_per_flashbang": player["stats"]["flashbang_hit_foe_per_flashbang"],
+            "flashbang_hit_friend_per_flashbang": player["stats"]["flashbang_hit_friend_per_flashbang"],
+            "flashbang_leading_to_kill": player["stats"]["flashbang_leading_to_kill"],
+            "flashbang_thrown": player["stats"]["flashbang_thrown"],
+        }
+        weapon_stats.append(stats)
+    df = pd.DataFrame(weapon_stats)
+    return df
+
+
+def get_all_he_stats():
+    weapon_stats = []
+    for player in get_all_player_data():
+        stats = {
+            "Name": player["name"],
+            "SteamID": player["steam64_id"],
+            "he_foes_damage_avg": player["stats"]["he_foes_damage_avg"],
+            "he_friends_damage_avg": player["stats"]["he_friends_damage_avg"],
+            "utility_on_death_avg": player["stats"]["utility_on_death_avg"],
+        }
+        weapon_stats.append(stats)
+    df = pd.DataFrame(weapon_stats)
+    return df
+
+
+## debug stuff
+# print(get_all_duell_stats())
+#
+# print(get_all_player_data()[0]["stats"])
