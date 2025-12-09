@@ -8,7 +8,7 @@ flash_page = st.Page("flash_stats.py", title="IB Leetify Flash Stats", icon="ðŸ‘
 he_page = st.Page("he_stats.py", title="IB Leetify HE Stats", icon="ðŸ’¥")
 
 
-pg = st.navigation([rating_page, duell_page, trade_page, flash_page, he_page])
+pg = st.navigation([rating_page, aim_page, duell_page, trade_page, flash_page, he_page])
 st.set_page_config(page_title="Iron Blow Schwanzvergleich", page_icon=":material/edit:")
 
 
