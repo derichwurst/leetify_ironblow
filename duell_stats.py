@@ -24,7 +24,7 @@ RADAR_METRICS = [
 PERCENTAGE_COLS = []
 
 
-st.title("🤼 IronBlow Leetify Duell Statistiken")
+st.title("🤼Leetify Duell Statistiken")
 st.markdown("---")
 
 

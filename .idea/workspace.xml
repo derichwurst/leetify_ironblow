@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6f453a-8268-4b5d-97ec-f2f832f7daaa" name="Changes" comment="adding aim page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/76561197961677583-End-of-Everything #Corridor 7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/76561197971163179-Frontallappen @Schade" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/76561197981396218-ColdDemon #ImHerzenNebenJürgen" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/76561197983756284-Metty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/76561198262480978-BND" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/76561198825927278-2DRUNK" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-    </list>
+    <list default="true" id="6e6f453a-8268-4b5d-97ec-f2f832f7daaa" name="Changes" comment="changes a lot of users" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -310,7 +301,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765305559361</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="changes a lot of users">
+      <option name="closed" value="true" />
+      <created>1769784714379</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1769784714379</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -334,6 +333,7 @@
     <MESSAGE value="add a lot of pages" />
     <MESSAGE value="duell text" />
     <MESSAGE value="adding aim page" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding aim page" />
+    <MESSAGE value="changes a lot of users" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes a lot of users" />
   </component>
 </project>
