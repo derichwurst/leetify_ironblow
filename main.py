@@ -9,7 +9,7 @@ he_page = st.Page("he_stats.py", title="IB Leetify HE Stats", icon="💥")
 
 
 pg = st.navigation([rating_page, aim_page, duell_page, trade_page, flash_page, he_page])
-st.set_page_config(page_title="CS2 Schwanzvergleich", page_icon=":material/edit:")
+st.set_page_config(page_title="CS2 Schwanzvergleich dataDate: 30.01.2026 16:00", page_icon=":material/edit:")
 
 
 
