@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e6f453a-8268-4b5d-97ec-f2f832f7daaa" name="Changes" comment="changes a lot of users">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="6e6f453a-8268-4b5d-97ec-f2f832f7daaa" name="Changes" comment="added date">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561197961498793-Gigelicious" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561197961498793-Gigelicious" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561197961665931-h0lly '" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561197961665931-h0lly '" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561197961677583-End-of-Everything #Corridor 7" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561197961677583-End-of-Everything #Corridor 7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561197971268652-Apfel_mit_Birne" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561197971268652-Apfel_mit_Birne" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561197977746640-Chross" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561197977746640-Chross" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561197981396218-ColdDemon #Käse" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561197981396218-ColdDemon #Käse" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561197983756284-Metty" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561197983756284-Metty" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561198015708203-Noobidoo" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561198015708203-Noobidoo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561198061947521-DerStils" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561198061947521-DerStils" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561198192429674-Son Gen0o" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561198192429674-Son Gen0o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/76561199553421305-EASY" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/76561199553421305-EASY" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,7 +354,23 @@
       <option name="project" value="LOCAL" />
       <updated>1769785074707</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="added date">
+      <option name="closed" value="true" />
+      <created>1769785390903</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1769785390903</updated>
+    </task>
+    <task id="LOCAL-00033" summary="added date">
+      <option name="closed" value="true" />
+      <created>1769789980232</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1769789980232</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -368,6 +395,7 @@
     <MESSAGE value="duell text" />
     <MESSAGE value="adding aim page" />
     <MESSAGE value="changes a lot of users" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes a lot of users" />
+    <MESSAGE value="added date" />
+    <option name="LAST_COMMIT_MESSAGE" value="added date" />
   </component>
 </project>
